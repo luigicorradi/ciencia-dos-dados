@@ -1,0 +1,42 @@
+#codigo para o jupyter notebook
+
+#-------------------------------------------------------
+print('Esperamos trabalhar no diretório')
+print(os.getcwd())
+#-------------------------------------------------------
+
+#-------------------------------------------------------
+dt = pd.read_excel('asus.xlsx',sep = ',')
+#dt = dt.Treinamento.str.strip(',')
+dt.Treinamento = dt.Treinamento.replace(',','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('@','',regex=True)
+dt.Treinamento = dt.Treinamento.replace(';','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('  ','',regex=True)
+dt.Treinamento = dt.Treinamento.replace(':','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('"','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('\\*','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('\*','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('_','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('\$','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('rt','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('//','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('/','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('https','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('#','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('\(','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('\)','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('\'','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('\?','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('\-','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('!','',regex=True)
+dt.Treinamento = dt.Treinamento.replace('\n','',regex=True) #pode dar erro 
+dt
+#-------------------------------------------------------
+
+#-------------------------------------------------------
+dt.Relevancia.value_counts('N') - ERRO!
+#-------------------------------------------------------
+
+#-------------------------------------------------------
+dt.iloc[0,1]
+#-------------------------------------------------------
